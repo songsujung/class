@@ -10,7 +10,6 @@ public class LoopTest {
 		
 		int num = 1; // 증가값
 		int sum = 0;
-		int result = 1; // 곱
 		
 		while(num<11) {
 			System.out.println(num + " : \t" + sum);
