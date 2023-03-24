@@ -3,7 +3,6 @@ package chapter02;
 public class PrintTest2 {
 
 	public static void main(String[] args) {
-		
 		String name = "손흥민";
 		
 		// 안녕하세요! 저는 OOO입니다. 나이는 OO살 입니다.
@@ -24,8 +23,6 @@ public class PrintTest2 {
 		System.out.println();
 		System.out.printf("문자 : %c, 문자열 : %s", 'Z', "KING");
 
-		
-		
 	}
 
 }
