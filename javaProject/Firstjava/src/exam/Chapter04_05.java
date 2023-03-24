@@ -1,6 +1,6 @@
-package chapter04_qize;
+package exam;
 
-public class chapter04_qize05 {
+public class Chapter04_05 {
 
 	public static void main(String[] args) {
 		// 문제 5. 문제2의 답안 코드를 switch 문으로 변경하여 보자.
@@ -10,20 +10,22 @@ public class chapter04_qize05 {
 		
 		if(num<0) {
 			System.out.println("0 미만");
-		} switch (num / 100) {
-		case 3 :  
-				System.out.println("300이상");
-				break;
-		case 2 :  
-			System.out.println("100이상 200 미만");
-			break;
-		case 1 :  
-			System.out.println("100이상 200 미만");
-			break;
-		default :
+		} else {
+			
+			switch (num / 100) {
+		case 0 : // 0~99
 			System.out.println("0이상 100 미만");
-			
-			
+			break;
+		case 1 :  // 100~199
+			System.out.println("100이상 200 미만");
+			break;
+		case 2 :  // 200~299
+			System.out.println("200이상 300 미만");
+			break;
+		default : // 300~ 
+			System.out.println("300이상");
+			break;
+			}
 		}
 	}
 

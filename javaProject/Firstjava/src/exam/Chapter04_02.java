@@ -1,6 +1,6 @@
-package chapter04_qize;
+package exam;
 
-public class chapter04_qize02 {
+public class Chapter04_02 {
 
 	public static void main(String[] args) {
 		/* 문제2. 다음과 같이 출력이 이루어지도록 작성해보자.
@@ -11,7 +11,7 @@ public class chapter04_qize02 {
 		300 ≤ num 이라면 “300이상 “ 출력*/
 		
 
-		int num = 300;
+		int num = 0;
 		
 		if(num<0) {
 			System.out.println("0 미만");

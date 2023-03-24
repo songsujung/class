@@ -1,13 +1,19 @@
-package chapter04_qize;
+package exam;
 
-public class chapter04_qize03 {
+public class Chapter04_03 {
 
 	public static void main(String[] args) {
 		// 문제3. CondOp.java를 조건연산자(3항 연산자)를 사용하지 않고, if~else를 사용하는 형태로 변경해 보자.
-	
-        int num1=50, num2=100;
-        int big, diff;
+		
+        int num1 = 50;
+        int num2 = 100;
         
+        int big = 0;
+        int diff = 0;
+        
+        
+        // 큰수 -> 두수를 비교해서 판별
+        // 두수의 차 -> 두수의 큰수와 작은 수를 구해서 큰수에서 작은수를 빼준다!
         if (num1>num2) { 
         	big = num1;
         	diff = num1-num2;	
@@ -16,8 +22,8 @@ public class chapter04_qize03 {
         	diff = num2-num1;
         }
         
-        System.out.println(big);
-        System.out.println(diff);
+        System.out.println("큰수 : " + big);
+        System.out.println("두 수의 차 : " + diff);
         
     }
 }
