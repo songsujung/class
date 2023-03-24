@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Chapter04_01 {
 
 	public static void main(String[] args) {
-		// 문제1.아래 예제는 두 개의 if문을 사용하고 있다. 한 개의 if 문만 사용하는 방식으로 변경해보자.
+		// 문제1.아래 예제는 두 개의 if문을 사용하고 있다. 한 개의 if 문만 사용하는 방식으로 변경해보자!
 		
 		Scanner in = new Scanner(System.in);
 		
