@@ -1,4 +1,4 @@
-package exam;
+package exam.chapter04;
 
 public class Chapter04_12 {
 
