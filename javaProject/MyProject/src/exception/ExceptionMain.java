@@ -15,29 +15,20 @@ public class ExceptionMain {
 		System.out.println("아이디를 입력하세요.");
 		String id = sc.nextLine();
  
-		if(checkName(id)) {
-			System.out.println(id);
-		} else {
-			System.out.println("영문자와 숫자만 입력 가능합니다.");
-		}
 		
-	}
-
-	
-	
-	private static boolean checkName(String id) {
-		
-		boolean result = true;
-		
+		try {
 		for(int i=0; i<id.length(); i++) {
 			char c = id.charAt(i);
 			if(!(c>='a' && c<='z'|| c>='A' && c<='z' || c>='0' && c<='9')) {
-				result = false;
-				break;
+				BadIdInputException e = new BadIdInputException("영문자와 숫자만 입력 가능합니다.");
+				throw e;
+				}
 			}
+		} catch(BadIdInputException e) {
+			System.out.println(e.getMessage());
+
 		}
 		
-		return result;
-	}
 
+	}
 }
