@@ -27,7 +27,7 @@ public class ExceptionMain {
 			}
 		} catch(BadIdInputException e) {
 			System.out.println(e.getMessage());
-			
+			return; // 영문자,숫자가 아닐 시 종료
 		}
 		
 		Scanner sc2 = new Scanner(System.in);
