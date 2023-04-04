@@ -22,13 +22,28 @@ public class ExceptionMain {
 			if(!(c>='a' && c<='z'|| c>='A' && c<='z' || c>='0' && c<='9')) {
 				BadIdInputException e = new BadIdInputException("영문자와 숫자만 입력 가능합니다.");
 				throw e;
+				
 				}
 			}
 		} catch(BadIdInputException e) {
 			System.out.println(e.getMessage());
-
+			
 		}
 		
-
+		Scanner sc2 = new Scanner(System.in);
+		
+		System.out.println("======================");
+		System.out.println("태어난 년도를 입력하세요.");
+		int year = sc.nextInt();
+		
+		try {
+			if(!(year >=1900 && year <=2023)) {
+				BadIdInputException e = new BadIdInputException("잘못된 생년월일 입력");
+				throw e;
+			} 
+		}catch (BadIdInputException e) {
+				System.out.println(e.getMessage());
+		}
+		System.out.println("프로그램을 종료합니다.");		
 	}
 }
