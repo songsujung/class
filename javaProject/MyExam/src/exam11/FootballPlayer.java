@@ -61,7 +61,7 @@ public class FootballPlayer {
 	//exam2
 	@Override
 	public int hashCode() {
-		return this.team.charAt(team.length()-1) % 5;  // 01234 5개의 그룹으로 추리기 위한 역할
+		return this.team.charAt(team.length()-1) % 5; // 0, 1, 2, 3, 4 5개의 그룹으로 추리기 위한 역할
 	}
 
 	//exam2
