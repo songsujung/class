@@ -1,4 +1,4 @@
-package exam11;
+package exam10;
 
 public class Exam1BadIdInputException extends Exception {
 

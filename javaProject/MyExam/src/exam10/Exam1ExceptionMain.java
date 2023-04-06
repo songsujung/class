@@ -1,4 +1,4 @@
-package exam11;
+package exam10;
 
 import java.util.Scanner;
 
