@@ -2,7 +2,7 @@ package exam11;
 
 import java.util.Scanner;
 
-public class ExceptionMain {
+public class Exam1ExceptionMain {
 	
 	public static void main(String[] args) {
 		// 콘솔에서 사용자 아이디를 입력 받아
@@ -20,12 +20,12 @@ public class ExceptionMain {
 		for(int i=0; i<id.length(); i++) {
 			char c = id.charAt(i);
 			if(!(c>='a' && c<='z'|| c>='A' && c<='z' || c>='0' && c<='9')) {
-				BadIdInputException e = new BadIdInputException("영문자와 숫자만 입력 가능합니다.");
+				Exam1BadIdInputException e = new Exam1BadIdInputException("영문자와 숫자만 입력 가능합니다.");
 				throw e;
 				
 				}
 			}
-		} catch(BadIdInputException e) {
+		} catch(Exam1BadIdInputException e) {
 			System.out.println(e.getMessage());
 			return; // 영문자,숫자가 아닐 시 종료
 		}
@@ -38,10 +38,10 @@ public class ExceptionMain {
 		
 		try {
 			if(!(year >=1900 && year <=2023)) {
-				BadIdInputException e = new BadIdInputException("잘못된 생년월일 입력");
+				Exam1BadIdInputException e = new Exam1BadIdInputException("잘못된 생년월일 입력");
 				throw e;
 			} 
-		}catch (BadIdInputException e) {
+		}catch (Exam1BadIdInputException e) {
 				System.out.println(e.getMessage());
 		}
 		System.out.println("프로그램을 종료합니다.");		
