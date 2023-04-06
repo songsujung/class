@@ -2,7 +2,7 @@ package exception;
 
 import java.util.Scanner;
 
-public class Exam1Main_t {
+public class Exam1Main {
 
 	   public static void main(String[] args) {
 	   
