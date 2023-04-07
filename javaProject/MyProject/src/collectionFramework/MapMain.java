@@ -13,6 +13,7 @@ public class MapMain {
 
 		FootballPlayer footballPlayer = myTeam.get(7);
 		System.out.println(footballPlayer);
+	
 	}
 
 }
