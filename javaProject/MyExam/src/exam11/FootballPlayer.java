@@ -47,12 +47,14 @@ public class FootballPlayer {
 		this.age = age;
 	}
 
+	
+	//exam1
 	@Override
 	public String toString() {
 		return "Exam2Set [name=" + name + ", number=" + number + ", team=" + team + ", age=" + age + "]";
 	}
 	
-	//exam1
+	
 	public void showInfo() { 
 		System.out.printf("[%s] %s(%d, %d)\n", this.team, this.name, this.number, this.age);
 	}
@@ -78,11 +80,8 @@ public class FootballPlayer {
 		System.out.println(result);
 		
 		return result;
-		
-		
 	}
 	
-	
-		
+
 
 }
