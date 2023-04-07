@@ -3,6 +3,7 @@ package collectionFramework;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class FootballPlayer { // 축구선수의 정보를 저장하는 클래스 : 축구선수 데이터저장 -> 인스턴스 생성
 	/* 축구선수 클래스를 만들어 봅시다.
 		class FootballPlayer {
@@ -64,6 +65,28 @@ public class FootballPlayer { // 축구선수의 정보를 저장하는 클래�
 		this.age = age;
 	}
 
+	//exam2
+	@Override
+	public int hashCode() {
+		return this.age;
+	}
+
+	//exam2
+	@Override
+	public boolean equals(Object obj) {
+		
+		boolean result = false;
+		
+		if(obj != null && obj instanceof FootballPlayer) {
+			FootballPlayer player = (FootballPlayer)obj;
+			result = this.team.equals(player.getTeam()) && this.name.equals(player.getName()) && this.age == player.getAge();
+		}	// 문자끼리 비교할떄는 equals() 비교  /  숫자비교는 그냥 == 으로 비교
+		
+		
+		return result;
+	}
+	
+	
 	
 	@Override
 	public String toString() {
