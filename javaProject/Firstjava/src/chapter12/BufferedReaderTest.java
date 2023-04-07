@@ -14,7 +14,7 @@ public class BufferedReaderTest {
 
 		// Reader 객체 생성
 		try {
-			in = new BufferedReader(new FileReader("d:\\\\test\\\\test-text2.txt"));
+			in = new BufferedReader(new FileReader("d:\\test\\test-text2.txt"));
 
 			while (true) {
 				// 읽기
@@ -25,7 +25,7 @@ public class BufferedReaderTest {
 				System.out.println(str);
 			}
 
-			System.out.println("읽기 종료....");
+			System.out.println("읽기 종료...");
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
