@@ -101,7 +101,8 @@ select * from emp where sal between 2000 and 3000;
 -- 범위 연산자의 연산은 날짜도 가능 : 날짜는 작은 따움표로 정의
 -- 1987년에 입사한 사원 -> '87/01/01' ~ '87/12/31'
 select * from emp where hiredate between '87/01/01' and '87/12/31';
-
+-- between and의 반대조건
+select * from emp where hiredate not between '87/01/01' and '87/12/31';
 
 
 -- 10번, 20번, 30번 부서에 소속한 사원의 정보를 출력
@@ -110,6 +111,8 @@ select * from emp where deptno=10 or deptno=20 or deptno=30;
 -- 컬럼 in(값1, 값2, 값3, ...) : or의 연산을 간단하게 처리
 -- 컬럼=값1 or 컬럼=값2 or 컬럼=값3 ...
 select * from emp where deptno in(10, 20, 30);
+-- in의 반대조건
+select * from emp where deptno not in(10, 20, 30);
 
 
 
@@ -131,3 +134,46 @@ select * from emp where ename like '_A%';
 select * from emp where ename like '__R%';
 -- 사원 이름 중 끝에서 두번째 문자가 Y인 사원 리스트
 select * from emp where ename like '_Y%';
+
+-- 이름에 A를 포함하지 않는 사원 리스트
+select * from emp where ename not like '%A%';
+
+
+
+-- NULL 여부를 판단하는 is null / is not null
+-- 커미션이 등록되지 않은 사원 리스트 => comm이 null인 사원
+select * from emp where comm is null;
+-- 커미션이 등록되어 있는 사원 리스트 => comm이 null이 아닌 사원
+select * from emp where comm is not null;
+-- 커미션을 받지 않는 사원(comm=0) 리스트
+select * from emp where comm=0 or comm is null;
+-- 커미션을 받는 사원 리스트
+select * from emp where not(comm=0 or comm is null);
+select * from emp where comm>0 and comm is not null;
+
+
+
+-- select의 출력 결과의 정렬 : 오름차순 asc, 내림차순 desc
+-- select ... from ... where ... order by 컬럼이름 { [asc] , desc }
+-- 급여순(오름차순)으로 사원 리스트 출력
+select * from emp order by sal asc;
+select * from emp order by sal;
+-- 급여순(내림차순)으로 사원 리스트 출력
+select * from emp order by sal desc;
+
+
+-- 문자 정렬
+-- 이름 순 : 사전 순서
+select * from emp order by ename; -- 오름차순
+select * from emp order by ename desc; -- 내림차순
+
+
+-- 날짜 정렬
+-- 입사일 빠른 순서대로 정렬 : 오름차순
+select * from emp order by hiredate;
+-- 최근 입사일 기준으로 정렬 : 내림차순
+select * from emp order by hiredate desc;
+
+
+-- 급여순으로 정렬
+select * from emp order by sal, ename desc;
