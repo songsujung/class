@@ -1,4 +1,4 @@
--- select example
+-- select example1
 
 -- EMP 테이블과 DEPT 테이블을 이용해서 풀이해 주세요.
 
