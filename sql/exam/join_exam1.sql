@@ -1,5 +1,5 @@
-
 --join_exam1
+
 
 --32. EQUI 조인을 사용하여 SCOTT 사원의 부서번호와 부서 이름을 출력하시오.
 select emp.ename, emp.deptno, dept.dname
