@@ -164,3 +164,16 @@ select * from emp01;
 select deptno from dept02 where dname='SALES';
 
 delete from emp01 where deptno=(select deptno from dept02 where dname='SALES');
+
+
+commit;
+
+
+delete from emp;
+
+select * from emp;
+
+select * from emp01;
+delete from emp01;
+
+rollback;
