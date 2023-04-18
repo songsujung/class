@@ -169,11 +169,21 @@ delete from emp01 where deptno=(select deptno from dept02 where dname='SALES');
 commit;
 
 
-delete from emp;
+-- sequence : 연속된 숫자를 생성해주는 객체
+-- create sequence 이름 [옵션]
+create sequence seq_dept_deptno
+start with 10
+increment by 10
+;
 
-select * from emp;
+-- 자동 생성된 값을 생성 : 시퀀스객체이름.nextval
+select seq_dept_deptno.nextval
+from dual;
 
-select * from emp01;
-delete from emp01;
+insert into dept01 values(seq_dept_deptno.nextval, 'test이름', 'test위치');
 
-rollback;
+select * from dept01;
+
+
+select seq_dept_deptno.currval
+from dual;
