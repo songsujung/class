@@ -2,7 +2,11 @@ package main;
 
 import java.util.Scanner;
 
+import controller.DeptDeleteController;
+import controller.DeptInsertController;
 import controller.DeptListController;
+import controller.DeptSearchController;
+import controller.DeptUpdateController;
 
 public class DeptManagerMain {
 	
@@ -25,13 +29,31 @@ public class DeptManagerMain {
 	
 			int menu = Integer.parseInt(sc.nextLine());
 			
-			switch(menu) {
-			case 1:
-				new DeptListController().getDeptList();
-			case 6:	
-				return;
-				
-			}
+			switch (menu) {
+	         case 1:
+	        	DeptListController.getInstance().process();
+	            //new DeptListController().getDeptList();
+	            break;
+	         case 2:
+	        	DeptSearchController.getInstance().process();
+	            //new DeptSearchController().searchDept();
+	            break;
+	         case 3:
+	        	DeptInsertController.getInstance().process();
+	            //new DeptInsertController().insertDept();
+	            break;     
+	         case 4 :
+	        	DeptUpdateController.getInstance().process();
+	        	//new DeptUpdateController().updateDept();
+	        	break;
+	         case 5 :
+	        	DeptDeleteController.getInstance().process();
+	        	//new DeptDeleteController().deleteDept();
+	        	break;
+	         case 6:
+	        	 System.out.println("프로그램이 종료됩니다.");
+	            return;
+	         }
 		
 		}
 		
