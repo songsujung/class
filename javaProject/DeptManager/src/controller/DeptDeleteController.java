@@ -13,6 +13,7 @@ public class DeptDeleteController implements Controller {
 	DeptListService listService;
 	DeptDeleteService deleteService;
 	
+	// 싱글톤 시작
 	private DeptDeleteController() {
 		this.listService = DeptListService.getInstance();
 		this.deleteService = DeptDeleteService.getInstance();
@@ -23,6 +24,7 @@ public class DeptDeleteController implements Controller {
 	public static DeptDeleteController getInstance() {
 		return controller;
 	}
+	// 싱글톤 끝
 
 
 	public void process() {
