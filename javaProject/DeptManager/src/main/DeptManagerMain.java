@@ -7,12 +7,16 @@ import controller.DeptInsertController;
 import controller.DeptListController;
 import controller.DeptSearchController;
 import controller.DeptUpdateController;
+import controller.FrontController;
 
 public class DeptManagerMain {
 	
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+		
+		FrontController frontController = new FrontController();
 		
 		
 		// Controller : view -> Service -> Dao -> Service -> Controller : view
@@ -29,32 +33,39 @@ public class DeptManagerMain {
 	
 			int menu = Integer.parseInt(sc.nextLine());
 			
-			switch (menu) {
-	         case 1:
-	        	DeptListController.getInstance().process();
-	            //new DeptListController().getDeptList();
-	            break;
-	         case 2:
-	        	DeptSearchController.getInstance().process();
-	            //new DeptSearchController().searchDept();
-	            break;
-	         case 3:
-	        	DeptInsertController.getInstance().process();
-	            //new DeptInsertController().insertDept();
-	            break;     
-	         case 4 :
-	        	DeptUpdateController.getInstance().process();
-	        	//new DeptUpdateController().updateDept();
-	        	break;
-	         case 5 :
-	        	DeptDeleteController.getInstance().process();
-	        	//new DeptDeleteController().deleteDept();
-	        	break;
-	         case 6:
-	        	 System.out.println("프로그램이 종료됩니다.");
-	            return;
-	         }
-		
+			if(menu==6) {
+				System.out.println("프로그램이 종료됩니다.");
+				return;
+			}
+			
+			frontController.menu.get(menu).process();
+			
+//			switch (menu) {
+//	         case 1:
+//	        	DeptListController.getInstance().process();
+//	            //new DeptListController().getDeptList();
+//	            break;
+//	         case 2:
+//	        	DeptSearchController.getInstance().process();
+//	            //new DeptSearchController().searchDept();
+//	            break;
+//	         case 3:
+//	        	DeptInsertController.getInstance().process();
+//	            //new DeptInsertController().insertDept();
+//	            break;     
+//	         case 4 :
+//	        	DeptUpdateController.getInstance().process();
+//	        	//new DeptUpdateController().updateDept();
+//	        	break;
+//	         case 5 :
+//	        	DeptDeleteController.getInstance().process();
+//	        	//new DeptDeleteController().deleteDept();
+//	        	break;
+//	         case 6:
+//	        	 System.out.println("프로그램이 종료됩니다.");
+//	            return;
+//	         }
+//		
 		}
 		
 		
