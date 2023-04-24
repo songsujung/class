@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<e:DomainDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:e="http://exerd.tomato.com/model" UUID="DDefinition_I5R04OJ7Ee2ID-1GhSLL7g" productId="com.tomato.db.mysql" version="2.5.17.20220110-1118">
+  <domain UUID="Domain_I5R04eJ7Ee2ID-1GhSLL7g" name="문자" suggestedDataType="VARCHAR(255)">
+    <domain UUID="Domain_I5R04uJ7Ee2ID-1GhSLL7g" name="주민등록번호" suggestedDataType="VARCHAR(13)"/>
+    <domain UUID="Domain_I5R04-J7Ee2ID-1GhSLL7g" name="주소"/>
+    <domain UUID="Domain_I5R05OJ7Ee2ID-1GhSLL7g" name="웹주소"/>
+    <domain UUID="Domain_I5R05eJ7Ee2ID-1GhSLL7g" name="전화번호" suggestedDataType="VARCHAR(30)"/>
+    <domain UUID="Domain_I5R05uJ7Ee2ID-1GhSLL7g" name="이메일" suggestedDataType="VARCHAR(40)"/>
+    <domain UUID="Domain_I5R05-J7Ee2ID-1GhSLL7g" name="이름" suggestedDataType="VARCHAR(50)"/>
+    <domain UUID="Domain_I5R06OJ7Ee2ID-1GhSLL7g" name="책이름" suggestedDataType="VARCHAR(100)"/>
+  </domain>
+  <domain UUID="Domain_I5R06eJ7Ee2ID-1GhSLL7g" name="숫자" suggestedDataType="INTEGER">
+    <domain UUID="Domain_I5R06uJ7Ee2ID-1GhSLL7g" name="금액" suggestedDataType="INT"/>
+    <domain UUID="Domain_I5R06-J7Ee2ID-1GhSLL7g" name="일련번호" suggestedDataType="BIGINT"/>
+  </domain>
+  <domain UUID="Domain_I5R07OJ7Ee2ID-1GhSLL7g" name="일시" suggestedDataType="DATETIME"/>
+  <domain UUID="Domain_I5R07eJ7Ee2ID-1GhSLL7g" name="객체" suggestedDataType="BLOB">
+    <domain UUID="Domain_I5R07uJ7Ee2ID-1GhSLL7g" name="이미지" suggestedDataType="VARBINARY"/>
+    <domain UUID="Domain_I5R07-J7Ee2ID-1GhSLL7g" name="오디오" suggestedDataType="VARBINARY"/>
+  </domain>
+  <domain UUID="Domain_I5R08OJ7Ee2ID-1GhSLL7g" name="날짜"/>
+  <domain UUID="Domain_I5R08eJ7Ee2ID-1GhSLL7g" name="제목" suggestedDataType="VARCHAR(50)"/>
+  <domain UUID="Domain_I5R08uJ7Ee2ID-1GhSLL7g" name="내용" suggestedDataType="VARCHAR(255)"/>
+  <domain UUID="Domain_I5R08-J7Ee2ID-1GhSLL7g" name="사이즈"/>
+</e:DomainDefinition>
