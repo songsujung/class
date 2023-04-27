@@ -11,10 +11,10 @@
   <h1>로그인</h1>
   <hr>
   <!-- 
-  	절대경로(서버루트경로 기준) : "/web/auth/login.jsp"
-  	상대경로(현재파일 기준) : "login.jsp"
-   -->
-  <form action="/web/auth/login" method="post">
+     절대경로(서버 루트경로 기준) : "/web/auth/login.jsp"
+     상대경로(현재파일 기준) : "login.jsp"
+      -->
+  <form action="login.jsp" method="post">
     <table>
       <tr>
         <td>아이디</td>
@@ -33,4 +33,3 @@
 
 </body>
 </html>
-
