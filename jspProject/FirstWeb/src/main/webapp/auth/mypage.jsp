@@ -19,6 +19,8 @@
 
   <h1>My Page</h1>
   <%= application.getAttribute("cnt") %>
+  
+  <a href="logout.jsp">로그아웃</a>
 
 
 </body>
