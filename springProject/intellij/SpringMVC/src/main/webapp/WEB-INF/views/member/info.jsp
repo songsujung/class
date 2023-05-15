@@ -1,19 +1,21 @@
 <%--
   Created by IntelliJ IDEA.
   User: hi
-  Date: 2023-05-10
-  Time: 오후 4:08
+  Date: 2023-05-15
+  Time: 오후 2:45
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Member Info</title>
 </head>
 <body>
 
-  <h1>sample1</h1>
-  <h2> ${msg} </h2>
+  <h1>
+      idx : ${idx} <br>
+      type : ${type}
+  </h1>
 
 </body>
 </html>
