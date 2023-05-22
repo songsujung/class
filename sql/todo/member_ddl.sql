@@ -25,6 +25,6 @@ select idx, uid, uname, uphoto from member where uid='cool' and pw='1111';
 -- select idx, uid, uname, uphoto from member where uid=? and pw=?
 
 
-sk book;
+desc book;
  
 select * from book where bookid=4 or bookid=9;
